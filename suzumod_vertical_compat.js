@@ -140,6 +140,11 @@ function updateCombatantList(data) {
         lightBar.style.boxShadow = "0 -1px 4px " + lightBarColors[combatantIdx % 8];
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
+        if (combatant_name == "YOU") {
+            boxCell.style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
+            boxCell.style.backgroundColor = "rgba(255, 255,255,0.16)";
+        }
+
         var nametag = boxCell.getElementsByClassName("name")[0];
         if (combatant['deaths'] > 0) {
             nametag.style.color = "#FFA0A0";

@@ -1,13 +1,13 @@
-let encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
+const encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
 
-let boxDpsHTML = `
+const boxDpsHTML = `
 <div class="lightbar"></div>
 <div class="nameplate">{icon}<span class="name">{name}</span></div>
 <div class="dps">{encdps} ({damage%})</div>
 <div class="crdh">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
 `;
 
-let boxHpsHTML = `
+const boxHpsHTML = `
 <div id="hpsbar" style="">{name} {effhps} ({enchps} -{OverHealPct})</div>
 <div class="lightbar"></div>
 `;
@@ -23,13 +23,13 @@ const lightBarColors = [
     "rgba(236, 129, 207, 1.0)",
 ];
 
-let config = {
+const config = {
     "duration": 60,  // Time duration after which DPSes are colored accordingly
     "dpsUpper": 125, // 'well played' players colored gold
     "dpsLower": 75,  // 'poorly played' DPS players colored red
     "dpsTank": 75,   // 'well played' tanks who managed to deliver a relatively high DPS but not exceeding the 'gold' standard
     "dpsHealer": 60, // 'well played' healers ...
-}
+};
 
 const roleTanks = ["Gla", "Mrd", "Pld", "War", "Drk", "Gnb"];
 const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc"];
@@ -112,11 +112,13 @@ function updateCombatantList(data) {
     tbodyDNew.id = 'tableBody_d';
     tbodyHNew.id = 'tableBody_h';
 
-    // DPS bar
     let tRowDps = tbodyDNew.insertRow(0);
+    let tRowHps = tbodyHNew.insertRow(0);
     let combatantIdx = 0;
+    let healerIdx = 0;
     for (let combatant_name in data.Combatant)
     {
+        // DPS bar
         let combatant = data.Combatant[combatant_name];
         let boxCell = tRowDps.insertCell(combatantIdx);
         boxCell.innerHTML = parseActFormat(boxDpsHTML, combatant);
@@ -126,6 +128,11 @@ function updateCombatantList(data) {
         lightBar.style.backgroundColor = lightBarColors[combatantIdx % 8];
         lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
 
+        if (combatant_name == "YOU") {
+            boxCell.style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
+            boxCell.style.backgroundColor = "rgba(255, 255,255,0.16)";
+        }
+        
         let nametag = boxCell.getElementsByClassName("name")[0];
         if (combatant['deaths'] > 0) {
             nametag.style.color = "#FFA0A0";
@@ -156,13 +163,8 @@ function updateCombatantList(data) {
                     dpsMeter.style.textShadow = "-1px 0 3px #FFA500, 0 1px 3px #FFA500, 1px 0 3px #FFA500, 0 -1px 3px #FFA500";
                 }
         }
-    }
 
-    // HPS bar
-    let tRowHps = tbodyHNew.insertRow(0);
-    let healerIdx = 0;
-    for (let combatant_name in data.Combatant) {
-        let combatant = data.Combatant[combatant_name];
+        // HPS bar
         if (roleHealers.indexOf(combatant["Job"]) > -1)
         {
             let boxCell = tRowHps.insertCell(healerIdx);
@@ -200,7 +202,7 @@ function fetchJobIcon(data) {
     for (let combatant_name in data.Combatant) {
         let combatant = data.Combatant[combatant_name];
         if (roles.indexOf(combatant["Job"]) > -1)
-            combatant["icon"] = `<img class="jobicon" src="jobicon/${combatant["Job"]}.png">`;
+            combatant["icon"] = `<img class="jobicon" alt="${combatant["Job"]}" src="jobicon/${combatant["Job"]}.png">`;
         else
             combatant["icon"] = "";
     }
