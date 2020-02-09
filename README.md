@@ -1,7 +1,9 @@
 # Overlay_SuzuMod
 Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 
-Modified from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin.
+Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to read https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html.
+
+由原装RainbowMage反复修改最后重写的自用悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
 
 ![Preview](/Sample.png)
 
