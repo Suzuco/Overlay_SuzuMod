@@ -104,8 +104,8 @@ html {
 }
 
 .jobicon {
-    width: 13px;
-    height: 13px;
-    vertical-align: middle;
-    margin-bottom: 0.5em;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 3px;
 }
