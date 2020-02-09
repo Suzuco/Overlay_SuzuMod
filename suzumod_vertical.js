@@ -141,7 +141,6 @@ function updateCombatantList(data) {
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
         if (combatant_name == "YOU") {
-            boxCell.childNodes[1].style.borderRadius = "6px";
             boxCell.childNodes[1].style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0))";
         }
 

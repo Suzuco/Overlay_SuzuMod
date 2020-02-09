@@ -75,6 +75,7 @@ html {
     text-overflow: ellipsis;
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
+    border-radius: 6px;
 }
 
 #encounter {
