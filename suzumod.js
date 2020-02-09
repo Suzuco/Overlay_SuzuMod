@@ -129,7 +129,7 @@ function updateCombatantList(data) {
         lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
 
         if (combatant_name == "YOU") {
-            boxCell.childNodes[1].style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0))";
+            boxCell.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0))";
         }
 
         let nametag = boxCell.getElementsByClassName("name")[0];
