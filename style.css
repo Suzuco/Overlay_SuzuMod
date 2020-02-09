@@ -1,0 +1,85 @@
+* {
+    font-family: "微软雅黑 UI", "Microsoft YaHei UI";
+    font-size: 11px;
+}
+
+body, html {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.resizeHandle {
+    background-image: url(handle.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 0;
+    margin: 0;
+}
+
+.table {
+    color: #E2EBF5;
+    text-shadow: -1px 0 3px #217AA2, 0 1px 3px #217AA2, 1px 0 3px #217AA2, 0 -1px 3px #217AA2;
+    font-weight: 400;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+#tableBody_h {
+    color: #F0F5EB;
+    text-shadow: -1px 0 3px #44A355, 0 1px 3px #44A355, 1px 0 3px #44A355, 0 -1px 3px #44A355;
+}
+
+.lightbar {
+    height: 3px;
+    margin: 0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.table td {
+    padding: 0;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table td > * {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+#encounter {
+    color: #DED7BE;
+    text-shadow: -1px 0 2px #795516, 0 1px 2px #795516, 1px 0 2px #795516, 0 -1px 2px #795516;
+    font-weight: 400;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+
+#debug {
+    color: #DED7BE;
+    text-shadow: -1px 0 2px #795516, 0 1px 2px #795516, 1px 0 2px #795516, 0 -1px 2px #795516;
+    font-weight: 400;
+    white-space: nowrap;
+}
