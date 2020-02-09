@@ -129,10 +129,10 @@ function updateCombatantList(data) {
         lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
 
         if (combatant_name == "YOU") {
-            boxCell.style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
-            boxCell.style.backgroundColor = "rgba(255, 255,255,0.16)";
+            boxCell.childNodes[1].style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
+            boxCell.childNodes[1].style.backgroundColor = "rgba(255, 255,255,0.16)";
         }
-        
+
         let nametag = boxCell.getElementsByClassName("name")[0];
         if (combatant['deaths'] > 0) {
             nametag.style.color = "#FFA0A0";

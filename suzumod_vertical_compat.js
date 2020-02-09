@@ -141,8 +141,8 @@ function updateCombatantList(data) {
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
         if (combatant_name == "YOU") {
-            boxCell.style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
-            boxCell.style.backgroundColor = "rgba(255, 255,255,0.16)";
+            boxCell.childNodes[1].style.boxShadow = "0 0 6px rgba(255, 255, 255, 0.42)";
+            boxCell.childNodes[1].style.backgroundColor = "rgba(255, 255,255,0.16)";
         }
 
         var nametag = boxCell.getElementsByClassName("name")[0];
