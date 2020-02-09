@@ -13,7 +13,7 @@ Originally designed to fit ultra-wide monitors, this overlay features dynamic DP
 
 This package contains [job icons from Gamerescape FFXIV Wiki](https://ffxiv.gamerescape.com/wiki/Dictionary_of_Icons).
 
-适用于ngld悬浮窗插件~~的可以，但没必要~~的一个悬浮窗。背景透明，用光条来展示比例。DPS列表会根据团伤占比动态调整每个DPS条的长度；治疗职业根据**有效**治疗量调整治疗条的长度。
+适用于ngld悬浮窗插件~~的可以，但没必要~~的一个悬浮窗。背景透明，用彩色光条来展示每个玩家造成的伤害占团队总伤害的比例。DPS列表会根据团伤占比动态调整每个DPS条的长度；治疗职业根据**有效**治疗量调整治疗条的长度。
 
 原本设计考虑到自己使用的带鱼屏，打算利用一下水平空间，所以做成了条形。
 
