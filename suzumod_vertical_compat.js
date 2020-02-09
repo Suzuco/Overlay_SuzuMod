@@ -2,7 +2,6 @@ const encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
 
 const boxDpsHTML = `
 <div class="container">
-<div class="lightbar"></div>
 <div style="width: 100%"></div>
 <div class="nameplate">{icon}<span class="name">{name}</span></div>
 <div class="crdh">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
@@ -10,6 +9,7 @@ const boxDpsHTML = `
 <div class="dps" style="flex-grow: 1">{encdps} ({damage%})</div>
 <div class="maxhit">{maxhit}</div>
 <div style="width: 100%"></div>
+<div class="lightbar"></div>
 </div>
 `;
 
@@ -137,7 +137,7 @@ function updateCombatantList(data) {
 
         var lightBar = boxCell.getElementsByClassName("lightbar")[0];
         lightBar.style.backgroundColor = lightBarColors[combatantIdx % 8];
-        lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
+        lightBar.style.boxShadow = "0 -1px 4px " + lightBarColors[combatantIdx % 8];
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
         var nametag = boxCell.getElementsByClassName("name")[0];

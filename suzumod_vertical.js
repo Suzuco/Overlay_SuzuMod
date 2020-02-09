@@ -1,8 +1,7 @@
-let encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
+const encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
 
-let boxDpsHTML = `
+const boxDpsHTML = `
 <div class="container">
-<div class="lightbar"></div>
 <div style="width: 100%"></div>
 <div class="nameplate">{icon}<span class="name">{name}</span></div>
 <div class="crdh">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
@@ -10,10 +9,11 @@ let boxDpsHTML = `
 <div class="dps" style="flex-grow: 1">{encdps} ({damage%})</div>
 <div class="maxhit">{maxhit}</div>
 <div style="width: 100%"></div>
+<div class="lightbar"></div>
 </div>
 `;
 
-let boxHpsHTML = `
+const boxHpsHTML = `
 <div id="hpsbar" style="">{name} {effhps}<br>({enchps} -{OverHealPct})</div>
 <div class="lightbar"></div>
 `;
@@ -29,13 +29,13 @@ const lightBarColors = [
     "rgba(236, 129, 207, 1.0)",
 ];
 
-let config = {
+const config = {
     "duration": 60,  // Time duration after which DPSes are colored accordingly
     "dpsUpper": 125, // 'well played' players colored gold
     "dpsLower": 75,  // 'poorly played' DPS players colored red
     "dpsTank": 75,   // 'well played' tanks who managed to deliver a relatively high DPS but not exceeding the 'gold' standard
     "dpsHealer": 60, // 'well played' healers ...
-}
+};
 
 const roleTanks = ["Gla", "Mrd", "Pld", "War", "Drk", "Gnb"];
 const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc"];
@@ -72,7 +72,6 @@ function update(data) {
     updateCombatantList(data);
 }
 
-let combatants = [];
 let totalHPS = 0.0;
 let topDps = 0.0;
 // Statistics for Average DPS and Total HPS
@@ -124,10 +123,13 @@ function updateCombatantList(data) {
     tbodyDNew.id = 'tableBody_d';
     tbodyHNew.id = 'tableBody_h';
 
-    // DPS bar
+    let tRowHps = tbodyHNew.insertRow(0);
+
     let combatantIdx = 0;
+    let healerIdx = 0;
     for (let combatant_name in data.Combatant)
     {
+        // DPS bar
         let tRowDps = tbodyDNew.insertRow(tbodyDNew.length);
         let combatant = data.Combatant[combatant_name];
         let boxCell = tRowDps.insertCell(0);
@@ -135,7 +137,7 @@ function updateCombatantList(data) {
 
         let lightBar = boxCell.getElementsByClassName("lightbar")[0];
         lightBar.style.backgroundColor = lightBarColors[combatantIdx % 8];
-        lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
+        lightBar.style.boxShadow = "0 -1px 4px " + lightBarColors[combatantIdx % 8];
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
         let nametag = boxCell.getElementsByClassName("name")[0];
@@ -168,13 +170,8 @@ function updateCombatantList(data) {
                     dpsMeter.style.textShadow = "-1px 0 3px #FFA500, 0 1px 3px #FFA500, 1px 0 3px #FFA500, 0 -1px 3px #FFA500";
                 }
         }
-    }
 
-    // HPS bar
-    let tRowHps = tbodyHNew.insertRow(0);
-    let healerIdx = 0;
-    for (let combatant_name in data.Combatant) {
-        let combatant = data.Combatant[combatant_name];
+        // HPS bar
         if (roleHealers.indexOf(combatant["Job"]) > -1)
         {
             let boxCell = tRowHps.insertCell(healerIdx);
@@ -212,7 +209,7 @@ function fetchJobIcon(data) {
     for (let combatant_name in data.Combatant) {
         let combatant = data.Combatant[combatant_name];
         if (roles.indexOf(combatant["Job"]) > -1)
-            combatant["icon"] = `<img class="jobicon" src="jobicon/${combatant["Job"]}.png">`;
+            combatant["icon"] = `<img class="jobicon" alt="${combatant["Job"]}" src="jobicon/${combatant["Job"]}.png">`;
         else
             combatant["icon"] = "";
     }

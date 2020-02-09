@@ -54,6 +54,11 @@ html {
     -webkit-box-sizing:border-box;
 }
 
+#table_d .lightbar {
+    position: relative;
+    top: -2px;
+}
+
 .container {
     padding: 0;
     margin: 0;
@@ -77,7 +82,8 @@ html {
     text-shadow: -1px 0 2px #795516, 0 1px 2px #795516, 1px 0 2px #795516, 0 -1px 2px #795516;
     font-weight: 400;
     white-space: nowrap;
-    padding: 0 20px;
+    padding: 0 20px 3px;
+    border-bottom: 1px dashed;
 }
 
 #debug {
