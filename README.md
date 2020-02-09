@@ -2,11 +2,17 @@
 Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 
 ---
-Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to read https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html.
+Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html.
 
-由原装RainbowMage反复修改最后重写的自用悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
+Update: the typical vertical list version can be found at https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html.
+
+由原装RainbowMage反复修改最后重写的自用悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为 https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
+
+更新：竖版布局 https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html 。
 
 ![Preview](/Sample.png)
+
+![Preview-V](/Sample_v.png)
 
 ---
 Originally designed to fit ultra-wide monitors, this overlay features dynamic DPS and HPS bars to display the percentage of damage and **effective** healing (healers only) accordingly, with transparent background and vivid light bars.
