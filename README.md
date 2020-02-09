@@ -14,7 +14,7 @@ Originally designed to fit ultra-wide monitors, this overlay features dynamic DP
 This package contains [job icons from Gamerescape FFXIV Wiki](https://ffxiv.gamerescape.com/wiki/Dictionary_of_Icons).
 
 ---
-由原装RainbowMage反复修改最后重写的自用悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为 https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
+由原装RainbowMage悬浮窗插件自带模板反复修改最后干脆重写然后一直在自用的悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为 https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
 
 更新：竖版布局 https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html 。
 
