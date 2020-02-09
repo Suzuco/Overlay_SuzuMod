@@ -2,10 +2,10 @@ let encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
 
 let boxDpsHTML = `
 <div class="lightbar"></div>
-<div class="job" style="font-size: 8px; height: 9px">{Job}</div>
-<div class="name" style="font-size: 13px">{name}</div>
+<div class="job" >{Job}&nbsp;</div>
+<div class="name">{name}</div>
 <div class="dps">{encdps} ({damage%})</div>
-<div class="crdh" style="font-size: 8px">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
+<div class="crdh">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
 `;
 
 let boxHpsHTML = `

@@ -83,3 +83,11 @@ html {
     font-weight: 400;
     white-space: nowrap;
 }
+
+.job, .crdh {
+    font-size: 8px;
+}
+
+.name {
+    font-size: 13px;
+}
