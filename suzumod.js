@@ -2,8 +2,7 @@ let encounterTitle = "{title} / Time: {duration} / DPS: {encdps}";
 
 let boxDpsHTML = `
 <div class="lightbar"></div>
-<div class="job" >{Job}&nbsp;</div>
-<div class="name">{name}</div>
+<div class="nameplate">{icon}<span class="name">{name}</span></div>
 <div class="dps">{encdps} ({damage%})</div>
 <div class="crdh">{crithit%}! {DirectHitPct}+ {CritDirectHitPct}!! {deaths}d</div>
 `;
@@ -13,7 +12,7 @@ let boxHpsHTML = `
 <div class="lightbar"></div>
 `;
 
-let lightBarColors = [
+const lightBarColors = [
     "rgba(255, 159, 159, 1.0)",
     "rgba(236, 207, 129, 1.0)",
     "rgba(191, 246, 136, 1.0)",
@@ -32,10 +31,10 @@ let config = {
     "dpsHealer": 60, // 'well played' healers ...
 }
 
-let roleTanks = ["Gla", "Pld", "Mrd", "War", "Drk", "Gnb"];
-let roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc"];
-let roleHealers = ["Cnj", "Whm", "Sch", "Eos", "Sle", "Ast"];
-let roles = [].concat(roleTanks, roleDPSes, roleHealers);
+const roleTanks = ["Gla", "Mrd", "Pld", "War", "Drk", "Gnb"];
+const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc"];
+const roleHealers = ["Cnj", "Whm", "Sch", "Ast"];
+const roles = [].concat(roleTanks, roleDPSes, roleHealers);
 
 let dpsAverage = 0;
 let duration = 0;
@@ -62,6 +61,7 @@ document.addEventListener("onOverlayDataUpdate", function (e) {
 // 表示要素の更新
 function update(data) {
     suzuMod(data);
+    fetchJobIcon(data);
     updateEncounter(data);
     updateCombatantList(data);
 }
@@ -103,8 +103,8 @@ function updateEncounter(data) {
 }
 
 function updateCombatantList(data) {
-    let tableD = document.getElementById("tableBody_d");
-    let tableH = document.getElementById("tableBody_h");
+    let tableD = document.getElementById("table_d");
+    let tableH = document.getElementById("table_h");
     let tbodyDOld = tableD.tBodies.namedItem('tableBody_d');
     let tbodyHOld = tableH.tBodies.namedItem('tableBody_h');
     let tbodyDNew = document.createElement('tbody');
@@ -193,6 +193,16 @@ function updateCombatantList(data) {
     }
     else {
         tableH.appendChild(tbodyHNew);
+    }
+}
+
+function fetchJobIcon(data) {
+    for (let combatant_name in data.Combatant) {
+        let combatant = data.Combatant[combatant_name];
+        if (roles.indexOf(combatant["Job"]) > -1)
+            combatant["icon"] = `<img class="jobicon" src="jobicon/${combatant["Job"]}.png">`;
+        else
+            combatant["icon"] = "";
     }
 }
 

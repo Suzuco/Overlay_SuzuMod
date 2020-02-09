@@ -27,15 +27,19 @@ html {
     margin: 0;
 }
 
-.table {
+.tableBar {
     color: #E2EBF5;
     text-shadow: -1px 0 3px #217AA2, 0 1px 3px #217AA2, 1px 0 3px #217AA2, 0 -1px 3px #217AA2;
     font-weight: 400;
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
+    table-layout: fixed;
 }
 
 #tableBody_h {
@@ -50,14 +54,15 @@ html {
     -webkit-box-sizing:border-box;
 }
 
-.table td {
+.tableBar tr {
+    vertical-align: top;
+}
+
+.tableBar > td {
     padding: 0;
     margin: 0;
     border-collapse: separate;
     border-spacing: 0;
-}
-
-.table td > * {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -84,10 +89,23 @@ html {
     white-space: nowrap;
 }
 
-.job, .crdh {
+.name {
+    font-size: 13px;
+    width: 50%;
+}
+
+.crdh {
     font-size: 8px;
 }
 
-.name {
-    font-size: 13px;
+.nameplate {
+    display: inline-block;
+    width: 100%;
+}
+
+.jobicon {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-bottom: 0.5em;
 }
