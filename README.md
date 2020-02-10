@@ -1,6 +1,9 @@
 # Overlay_SuzuMod
 Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 
+![Preview](/Sample.png)
+![Preview (Vertical Layout)](/Sample_v.png)
+
 ---
 Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html.
 
