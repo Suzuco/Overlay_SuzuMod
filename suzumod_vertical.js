@@ -195,7 +195,7 @@ function updateCombatantList(data) {
     }
 
     if (healerIdx == 2) {
-
+        tRowHps.childNodes[1].style.textAlign = "right";
     }
 
     if (tbodyDOld != void(0)) {
