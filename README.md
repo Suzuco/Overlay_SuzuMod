@@ -6,8 +6,9 @@ Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 
  Layout          | URL
 -----------------|-----------------------------------------------------------
- Horizontal 横排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html
- Vertical 竖排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html
+ Horizontal <br /> 横排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html
+ Vertical <br /> 竖排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html
+ Vertical + Background <br /> 竖排（带背景） | https://suzuco.github.io/Overlay_SuzuMod/miniparse+vb.html
 
 ---
 Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to one of the URL listed above that you prefer :)
