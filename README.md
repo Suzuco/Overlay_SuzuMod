@@ -4,19 +4,25 @@ Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 ![Preview](/Sample.png)
 ![Preview (Vertical Layout)](/Sample_v.png)
 
----
-Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html.
+-----------------|-----------------------------------------------------------
+ Layout          | URL
+-----------------|-----------------------------------------------------------
+ Horizontal      | https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html
+ 横排            |
+-----------------|-----------------------------------------------------------
+ Vertical        | https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html
+ 竖排            |
+-----------------|-----------------------------------------------------------
 
-Update: the typical vertical list version can be found at https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html.
+---
+Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to the URL listed above.
 
 Originally designed to fit ultra-wide monitors, this overlay features dynamic DPS and HPS bars to display the percentage of damage and **effective** healing (healers only) accordingly, with transparent background and vivid light bars.
 
 This package contains [job icons from Gamerescape FFXIV Wiki](https://ffxiv.gamerescape.com/wiki/Dictionary_of_Icons).
 
 ---
-由原装RainbowMage悬浮窗插件自带模板反复修改最后干脆重写然后一直在自用的悬浮窗。在ACT悬浮窗插件设置页面将悬浮窗地址设置为 https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html 即可。
-
-更新：竖版布局 https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html 。
+由原装RainbowMage悬浮窗插件自带模板反复修改最后干脆重写然后一直在自用的悬浮窗。在ACT悬浮窗插件设置页面按上述表格悬浮窗地址即可。
 
 适用于ngld悬浮窗插件~~的可以，但没必要~~的一个悬浮窗。背景透明，用彩色光条来展示每个玩家造成的伤害占团队总伤害的比例。DPS列表会根据团伤占比动态调整每个DPS条的长度；治疗职业根据**有效**治疗量调整治疗条的长度。
 
