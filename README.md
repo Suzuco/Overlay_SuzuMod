@@ -4,15 +4,10 @@ Yet another Miniparse overlay for RainbowMage/hibayasleep/ngld's plugin for ACT.
 ![Preview](/Sample.png)
 ![Preview (Vertical Layout)](/Sample_v.png)
 
------------------|-----------------------------------------------------------
  Layout          | URL
 -----------------|-----------------------------------------------------------
- Horizontal      | https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html
- 横排            |
------------------|-----------------------------------------------------------
- Vertical        | https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html
- 竖排            |
------------------|-----------------------------------------------------------
+ Horizontal 横排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse++.html
+ Vertical 竖排 | https://suzuco.github.io/Overlay_SuzuMod/miniparse+v.html
 
 ---
 Modified and re-written from template of [the plugin](https://github.com/ngld/OverlayPlugin), designed for use with the plugin. Simply direct your ACT Overlay Plugin to the URL listed above.
