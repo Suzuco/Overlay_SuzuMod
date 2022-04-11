@@ -17,6 +17,7 @@ const boxHpsHTML = `
 <div class="lightbar"></div>
 `;
 
+let dpsAverage = 0;
 let totalHPS = 0.0;
 let topDps = 0.0;
 // Statistics for Average DPS and Total HPS
@@ -85,7 +86,7 @@ function updateCombatantList(data) {
         lightBar.style.boxShadow = "0 -1px 4px " + lightBarColors[combatantIdx % 8];
         lightBar.style.width = Math.round(100 * parseFloat(combatant["encdps"]) / topDps).toString() + "%";
 
-        if (combatant_name == "YOU") {
+        if (combatant_name === "YOU") {
             boxCell.childNodes[1].style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0))";
         }
 
@@ -139,18 +140,18 @@ function updateCombatantList(data) {
         }
     }
 
-    if (healerIdx == 2) {
+    if (healerIdx === 2) {
         tRowHps.childNodes[1].style.textAlign = "right";
     }
 
-    if (tbodyDOld != void(0)) {
+    if (tbodyDOld !== void(0)) {
         tableD.replaceChild(tbodyDNew, tbodyDOld);
     }
     else {
         tableD.appendChild(tbodyDNew);
     }
 
-    if (tbodyHOld != void(0)) {
+    if (tbodyHOld !== void(0)) {
         tableH.replaceChild(tbodyHNew, tbodyHOld);
     }
     else {

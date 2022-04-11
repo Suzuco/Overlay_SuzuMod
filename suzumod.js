@@ -11,7 +11,7 @@ const boxHpsHTML = `
 <div class="lightbar"></div>
 `;
 
-let combatants = [];
+let dpsAverage = 0;
 let totalHPS = 0.0;
 // Statistics for Average DPS and Total HPS
 function suzuMod(data) {
@@ -73,7 +73,7 @@ function updateCombatantList(data) {
         lightBar.style.backgroundColor = lightBarColors[combatantIdx % 8];
         lightBar.style.boxShadow = "0 2px 4px " + lightBarColors[combatantIdx % 8];
 
-        if (combatant_name == "YOU") {
+        if (combatant_name === "YOU") {
             boxCell.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0))";
         }
 
@@ -127,14 +127,14 @@ function updateCombatantList(data) {
         }
     }
 
-    if (tbodyDOld != void(0)) {
+    if (tbodyDOld !== void(0)) {
         tableD.replaceChild(tbodyDNew, tbodyDOld);
     }
     else {
         tableD.appendChild(tbodyDNew);
     }
 
-    if (tbodyHOld != void(0)) {
+    if (tbodyHOld !== void(0)) {
         tableH.replaceChild(tbodyHNew, tbodyHOld);
     }
     else {

@@ -13,10 +13,10 @@ const lightBarColors = [
 
 const config = {
     "duration": 60,  // Time duration after which DPSes are colored accordingly
-    "dpsUpper": 125, // 'well played' players colored gold
-    "dpsLower": 75,  // 'poorly played' DPS players colored red
-    "dpsTank": 74,   // 'well played' tanks who managed to deliver a relatively high DPS but not exceeding the 'gold' standard
-    "dpsHealer": 68, // 'well played' healers ...
+    "dpsUpper": 125, // 'well played' players
+    "dpsLower": 75,  // 'poorly played' DPS'
+    "dpsTank": 74,   // 'well played' tanks
+    "dpsHealer": 68, // 'well played' healers
 };
 
 const roleTanks = ["Gla", "Mrd", "Pld", "War", "Drk", "Gnb"];
@@ -24,7 +24,6 @@ const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch"
 const roleHealers = ["Cnj", "Whm", "Sch", "Ast", "Sge"];
 const roles = [].concat(roleTanks, roleDPSes, roleHealers);
 
-let dpsAverage = 0;
 let duration = 0;
 
 document.addEventListener("onOverlayStateUpdate", function (e) {
