@@ -127,14 +127,14 @@ function updateCombatantList(data) {
         }
     }
 
-    if (tbodyDOld !== void(0)) {
+    if (tbodyDOld != void(0)) {
         tableD.replaceChild(tbodyDNew, tbodyDOld);
     }
     else {
         tableD.appendChild(tbodyDNew);
     }
 
-    if (tbodyHOld !== void(0)) {
+    if (tbodyHOld != void(0)) {
         tableH.replaceChild(tbodyHNew, tbodyHOld);
     }
     else {
