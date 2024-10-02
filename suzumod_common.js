@@ -44,8 +44,8 @@ document.addEventListener("onOverlayDataUpdate", function (e) {
     update(e.detail);
 });
 
-window.addOverlayListener("CombatData", update);
-window.startOverlayEvents();
+addOverlayListener("CombatData", update);
+startOverlayEvents();
 
 // 表示要素の更新
 function update(data) {
