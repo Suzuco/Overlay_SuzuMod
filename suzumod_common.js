@@ -20,7 +20,7 @@ const config = {
 };
 
 const roleTanks = ["Gla", "Mrd", "Pld", "War", "Drk", "Gnb"];
-const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc", "Rpr"];
+const roleDPSes = ["Pgl", "Mnk", "Lnc", "Drg", "Arc", "Brd", "Rog", "Nin", "Mch", "Acn", "Smn", "Thm", "Blm", "Sam", "Rdm", "Blu", "Dnc", "Rpr", "Vpr", "Pct"];
 const roleHealers = ["Cnj", "Whm", "Sch", "Ast", "Sge"];
 const roles = [].concat(roleTanks, roleDPSes, roleHealers);
 
